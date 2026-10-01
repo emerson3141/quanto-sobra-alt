@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quanto Sobra</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- CABEÇALHO -->
+        <header class="header">
+            <div>
+                <h1>Quanto Sobra</h1>
+                <p id="mesAtual">Setembro de 2026</p>
+            </div>
+
+            <button id="btnAdicionarGasto" class="btn-principal">
+                + Gasto
+            </button>
+        </header>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main>
+
+            <!-- RESUMO -->
+            <section class="resumo">
+
+                <div class="card card-destaque">
+
+                    <span class="label">
+                        Quanto sobra
+                    </span>
+
+                    <strong id="quantoSobra">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <div class="resumo-grid">
+
+                    <div class="card">
+
+                        <span class="label">
+                            Saldo atual
+                        </span>
+
+                        <strong id="saldoAtual">
+                            R$ 0,00
+                        </strong>
+
+                        <button id="btnEditarSaldo">
+                            Editar saldo
+                        </button>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <span class="label">
+                            Ainda preciso gastar
+                        </span>
+
+                        <strong id="aindaPrecisoGastar">
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESUMO DO MÊS -->
+            <section>
+
+                <h2>Resumo do mês</h2>
+
+                <div class="card">
+
+                    <div class="linha-resumo">
+                        <span>Previsto</span>
+                        <strong id="totalPrevisto">
+                            R$ 0,00
+                        </strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span>Já realizado</span>
+                        <strong id="totalRealizado">
+                            R$ 0,00
+                        </strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PRÓXIMOS GASTOS -->
+            <section>
+
+                <div class="titulo-secao">
+                    <h2>Próximos gastos</h2>
+
+                    <button id="btnVerGastos">
+                        Ver todos
+                    </button>
+                </div>
+
+
+                <div id="listaGastos">
+
+                    <div class="vazio">
+                        Nenhum gasto cadastrado.
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- NAVEGAÇÃO -->
+        <nav class="navegacao">
+
+            <button class="nav-ativo" data-tela="inicio">
+                <span>⌂</span>
+                Início
+            </button>
+
+            <button data-tela="gastos">
+                <span>☷</span>
+                Gastos
+            </button>
+
+            <button data-tela="contas">
+                <span>◉</span>
+                Contas
+            </button>
+
+            <button data-tela="historico">
+                <span>◷</span>
+                Histórico
+            </button>
+
+            <button data-tela="configuracoes">
+                <span>⚙</span>
+                Ajustes
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal escondido">
+
+        <div class="modal-conteudo">
+
+            <div class="modal-cabecalho">
+
+                <h2 id="modalTitulo">
+                    Quanto Sobra
+                </h2>
+
+                <button id="fecharModal">
+                    ×
+                </button>
+
+            </div>
+
+            <div id="modalCorpo"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT PRINCIPAL -->
+    <script src="app.js"></script>
+
+</body>
+</html>
