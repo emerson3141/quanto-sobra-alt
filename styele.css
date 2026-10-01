@@ -1,0 +1,697 @@
+/* =========================================================
+   QUANTO SOBRA — ESTILOS BASE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: #f5f6f8;
+    color: #17191c;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+#app {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding-bottom: 90px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding: 18px 18px 14px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 1.2;
+
+    font-weight: 750;
+}
+
+.header p {
+    margin: 4px 0 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+button {
+    font-family: inherit;
+}
+
+.btn-principal {
+    border: 0;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    background: #111827;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s ease,
+        opacity 0.1s ease;
+}
+
+.btn-principal:active {
+    transform: scale(0.97);
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+main {
+    padding: 18px;
+}
+
+section {
+    margin-bottom: 22px;
+}
+
+h2 {
+    margin: 0 0 10px;
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 16px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.035);
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL — QUANTO SOBRA
+   ========================================================= */
+
+.card-destaque {
+    background: #111827;
+
+    color: white;
+
+    padding: 20px;
+
+    margin-bottom: 10px;
+}
+
+.card-destaque .label {
+    color: #cbd5e1;
+}
+
+.card-destaque strong {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 36px;
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   RESUMO
+   ========================================================= */
+
+.resumo-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.resumo-grid .card {
+    min-width: 0;
+}
+
+.label {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.card strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   BOTÃO DE EDITAR SALDO
+   ========================================================= */
+
+#btnEditarSaldo {
+    margin-top: 10px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #374151;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESUMO DO MÊS
+   ========================================================= */
+
+.linha-resumo {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 5px 0;
+}
+
+.linha-resumo + .linha-resumo {
+    margin-top: 8px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #eef0f2;
+}
+
+.linha-resumo span {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.linha-resumo strong {
+    margin: 0;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   TÍTULO DA SEÇÃO
+   ========================================================= */
+
+.titulo-secao {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.titulo-secao h2 {
+    margin: 0;
+}
+
+.titulo-secao button {
+    border: 0;
+
+    background: transparent;
+
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   LISTA DE GASTOS
+   ========================================================= */
+
+#listaGastos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.gasto-item {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    padding: 13px 14px;
+}
+
+.gasto-topo {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.gasto-descricao {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.gasto-categoria {
+    margin-top: 3px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+.gasto-valores {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.gasto-previsto {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+.gasto-restante {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.gasto-restante.pendente {
+    color: #b45309;
+}
+
+.gasto-restante.concluido {
+    color: #047857;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+    flex-shrink: 0;
+
+    padding: 4px 7px;
+
+    border-radius: 999px;
+
+    background: #f3f4f6;
+
+    color: #4b5563;
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.status.concluido {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.status.parcial {
+    background: #fffbeb;
+    color: #92400e;
+}
+
+.status.pendente {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+
+/* =========================================================
+   ESTADO VAZIO
+   ========================================================= */
+
+.vazio {
+    padding: 30px 15px;
+
+    border: 1px dashed #d1d5db;
+
+    border-radius: 16px;
+
+    background: white;
+
+    color: #6b7280;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO INFERIOR
+   ========================================================= */
+
+.navegacao {
+    position: fixed;
+
+    left: 50%;
+    bottom: 0;
+
+    z-index: 20;
+
+    width: 100%;
+    max-width: 600px;
+
+    transform: translateX(-50%);
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    background: white;
+
+    border-top: 1px solid #e5e7eb;
+
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.navegacao button {
+    border: 0;
+
+    background: transparent;
+
+    color: #737780;
+
+    padding: 9px 3px 8px;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+}
+
+.navegacao button span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 19px;
+
+    line-height: 1;
+}
+
+.navegacao button.nav-ativo {
+    color: #111827;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.modal.escondido {
+    display: none;
+}
+
+.modal-conteudo {
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 22px 22px 0 0;
+
+    padding: 18px;
+}
+
+.modal-cabecalho {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.modal-cabecalho h2 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+#fecharModal {
+    width: 34px;
+    height: 34px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #f3f4f6;
+
+    color: #374151;
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
+
+.form-grupo {
+    margin-bottom: 14px;
+}
+
+.form-grupo label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #4b5563;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 11px;
+
+    padding: 11px 12px;
+
+    background: white;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: #6b7280;
+}
+
+.form-acoes {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.form-acoes button {
+    flex: 1;
+
+    padding: 12px;
+
+    border-radius: 11px;
+
+    font-weight: 650;
+}
+
+.btn-secundario {
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    color: #374151;
+}
+
+.btn-confirmar {
+    border: 0;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (min-width: 601px) {
+
+    body {
+        padding-bottom: 20px;
+    }
+
+    #app {
+        background: #f5f6f8;
+    }
+
+    .navegacao {
+        bottom: 12px;
+
+        border: 1px solid #dfe1e5;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 8px 30px rgba(0, 0, 0, 0.08);
+
+        overflow: hidden;
+    }
+
+    .modal {
+        align-items: center;
+    }
+
+    .modal-conteudo {
+        border-radius: 20px;
+
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+}
